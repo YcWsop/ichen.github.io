@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-side="a"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Ich'en — physics research and a personal Chinese blog."><meta name="theme-color" id="theme-color" content="#f5f4ef"><title>Ich'en | Research &amp; Notes</title><style>
+<html lang="en" data-side="a"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Ichen — physics research and a personal Chinese blog."><meta name="theme-color" id="theme-color" content="#f5f4ef"><title>Ichen | Research &amp; Notes</title><style>
 :root{color-scheme:light;--ink:#1c2934;--muted:#52616d;--line:#d8dedf;--accent:#176758}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f5f4ef;color:var(--ink);font:17px/1.7 system-ui,sans-serif}
  #side-a main,#side-a footer,#side-a nav{max-width:1000px;margin:auto;padding:24px}nav{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-bottom:1px solid var(--line)}a{color:var(--accent);text-underline-offset:4px}
@@ -30,20 +30,20 @@ html[data-side="b"] .side-switch{top:10px;color:#b9bdbd;border-color:#535757}htm
 <button type="button" class="side-switch" id="side-switch" aria-controls="side-a side-b" aria-pressed="false" aria-label="切换到 Side B：个人博客" hidden>Side B</button>
 <div id="side-a" lang="en">
 <a class="skip-link" href="#main">Skip to content</a>
-<nav aria-label="Main navigation"><strong>Ich'en</strong><div><a href="#research">Research</a> · <a href="#notes">Notes</a> · <a href="https://github.com/YcWsop">GitHub</a></div></nav>
+<nav aria-label="Main navigation"><strong>Ichen</strong><div><a href="#research">Research</a> · <a href="#notes">Notes</a> · <a href="https://github.com/YcWsop">GitHub</a></div></nav>
 <main id="main" tabindex="-1">
-<header><div class="eyebrow">Physics · Statistical mechanics · Machine learning</div><h1>Research &amp; Notes</h1><p class="intro">I'm Ich'en, a physics master's student at Radboud University in Nijmegen.</p><p>My interests lie in statistical physics, machine learning, and neural dynamics.</p><p class="muted">Selected projects and notes.</p></header>
+<header><div class="eyebrow">Physics · Statistical mechanics · Machine learning</div><h1>Research &amp; Notes</h1><p class="intro">I'm Ichen, a physics master's student at Radboud University in Nijmegen.</p><p>My interests lie in statistical physics, machine learning, and neural dynamics.</p><p class="muted">Selected projects and notes.</p></header>
 <section id="research" aria-labelledby="research-title"><h2 id="research-title">Selected projects</h2>
 <div class="grid"><article id="transfer-learning"><span class="badge">Ongoing</span><h3>Statistical mechanics of transfer learning</h3><p>Transfer learning in shallow neural networks, from a statistical-mechanics perspective.</p><small>Research scope and public materials will be updated as the project develops.</small></article></div></section>
 <section id="notes"><h2>Notes &amp; writing</h2><p class="note">A space for research explanations and learning notes. No public notes are available here yet.</p></section>
-</main><footer>Ich'en · <a href="https://github.com/YcWsop/ichen.github.io">Site source</a></footer>
+</main><footer>Ichen · <a href="https://github.com/YcWsop/ichen.github.io">Site source</a></footer>
 </div>
 <div id="side-b" lang="zh-CN" hidden>
 <div class="blog-top">SIDE B · 个人博客</div>
-<header class="blog-masthead"><h1>Ich'en 的博客</h1><p>随笔 · 阅读 · 生活</p></header>
+<header class="blog-masthead"><h1>Ichen 的博客</h1><p>随笔 · 阅读 · 生活</p></header>
 <nav class="blog-nav" aria-label="博客导航"><a href="#writing" aria-current="page">文章列表</a></nav>
 <main class="blog-content" id="writing"><p class="breadcrumb">博客 / 文章列表</p><h2>文章列表</h2><div class="archive-years" id="archive-years" aria-label="按年份浏览"></div><div id="archive"></div><div class="blog-empty" id="blog-empty"><p>暂无文章。</p></div></main>
-<footer class="blog-footer">Ich'en · <a href="https://github.com/YcWsop">GitHub</a></footer>
+<footer class="blog-footer">Ichen · <a href="https://github.com/YcWsop">GitHub</a></footer>
 </div><p class="sr-only" id="side-status" role="status" aria-live="polite"></p>
 <noscript><style>#side-b[hidden]{display:block!important}#side-b{margin-top:40px}</style></noscript>
 <script>
@@ -53,7 +53,7 @@ html[data-side="b"] .side-switch{top:10px;color:#b9bdbd;border-color:#535757}htm
 const posts = [];
 const root=document.documentElement, a=document.getElementById('side-a'), b=document.getElementById('side-b'), toggle=document.getElementById('side-switch');
 function sideFromHash(){if(['#b','#writing'].includes(location.hash)||/^#year-\d{4}$/.test(location.hash))return 'b';if(['','#a','#research','#notes'].includes(location.hash))return 'a';return null;}
-function render(side,announce=false){const personal=side==='b';const old=personal?a:b;const focus=old.contains(document.activeElement);root.dataset.side=side;root.lang=personal?'zh-CN':'en';a.hidden=personal;b.hidden=!personal;toggle.textContent=personal?'Side A':'Side B';toggle.setAttribute('aria-pressed',String(personal));toggle.setAttribute('aria-label',personal?'Switch to Side A: research':'切换到 Side B：个人博客');document.title=personal?"Ich'en | 中文博客":"Ich'en | Research & Notes";document.getElementById('theme-color').content=personal?'#171819':'#f5f4ef';if(announce){document.getElementById('side-status').textContent=personal?'已切换到个人博客。':'Switched to research.';if(focus)toggle.focus({preventScroll:true});}}
+function render(side,announce=false){const personal=side==='b';const old=personal?a:b;const focus=old.contains(document.activeElement);root.dataset.side=side;root.lang=personal?'zh-CN':'en';a.hidden=personal;b.hidden=!personal;toggle.textContent=personal?'Side A':'Side B';toggle.setAttribute('aria-pressed',String(personal));toggle.setAttribute('aria-label',personal?'Switch to Side A: research':'切换到 Side B：个人博客');document.title=personal?"Ichen | 中文博客":"Ichen | Research & Notes";document.getElementById('theme-color').content=personal?'#171819':'#f5f4ef';if(announce){document.getElementById('side-status').textContent=personal?'已切换到个人博客。':'Switched to research.';if(focus)toggle.focus({preventScroll:true});}}
 const archive=document.getElementById('archive'),years=document.getElementById('archive-years');
 const groups=new Map();
 for(const post of posts.slice().sort((x,y)=>y.date.localeCompare(x.date))){if(!/^\d{4}-\d{2}-\d{2}$/.test(post.date)||!post.title||!post.url||/^(?:[a-z]+:|\/\/)/i.test(post.url))continue;const year=post.date.slice(0,4);if(!groups.has(year))groups.set(year,[]);groups.get(year).push(post);}
